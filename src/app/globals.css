@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+html {
+/*  height: 100%;
+  width: 100%;
+  background: url("/background4.png");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-attachment: fixed;
+  background-size: cover;*/
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  font-family: "Comic Sans MS", "Comic Sans" !important;
+  font-weight: bold;
+  font-size: 18px;
+  text-underline-offset: 4px;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.glow {
+  color: #fff;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073,
+      0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6,
+      0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+
+.image-glow-yellow {
+  filter: drop-shadow(0 0 12px rgb(217, 217, 0, 0.75));
+}
+
+.image-glow-purple {
+  filter: drop-shadow(0 0 12px rgb(217, 0, 217, 0.75));
+}
+
+.pinksale-badge {
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  display: inline-block;
+  border-color: rgb(54, 59, 61);
+  box-sizing: border-box;
+  color: rgb(255 255 255);
+  text-transform: capitalize;
+  font-size: 15px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.pinksale-badge-ama {
+  background-color: rgb(70 102 255);
+}
+
+.pinksale-badge-safu {
+  background-color: #7c3aec;
+}
+
+.pinksale-badge-audit {
+  background-color: #0b84ba;
+}
+
+.pinksale-badge-kyc {
+  background-color: #1b9e4b;
+}
+
+.pinksale-badge-doxx {
+  background-color: #f59e0b;
+}
+
+.countdown {
+  display: flex;
+  flex-direction: column;
+  padding: 4px;
+  border-radius: 10px;
+  background: linear-gradient(
+    180deg,
+    #ca19e122 31.07%,
+    #704991 86.75%
+  ) !important;
+  border-width: 2px;
+  border-color: black;
+  color: white;
+  text-align: center;
+  font-size: 44px;
+  width: 88px;
+}
+
+.countdown-sub {
+  font-size: 1rem;
+  color: #aaa;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .countdown {
+    font-size: 24px;
+    width: 48px;
+  }
+
+  .countdown-sub {
+    font-size: 0.75rem;
+    color: #aaa;
+    text-align: center;
+  }
+}
