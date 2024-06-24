@@ -97,7 +97,7 @@ export default function Header() {
           </Link>
         </div>
         <nav className="flex space-x-4 lg:space-x-8">
-        <a
+          <a
             href="#home"
             className="hover:underline hover:underline-offset-4 transition-all duration-150 hidden lg:block mt-2"
             onClick={(e) => {
@@ -137,14 +137,11 @@ export default function Header() {
           >
             PARTNERSHIPS
           </a>
-          <ButtonApp
-            className={`${styles.buttonApp} ${styles.buttonShadow}`}
-            onClick={() => {
-              setIsModalOpen(true);
-            }}
-          >
-            LAUNCH APP
-          </ButtonApp>
+          <a href="https://app.moonmouse.io/staking/">
+            <ButtonApp className={`${styles.buttonApp} ${styles.buttonShadow}`}>
+              LAUNCH APP
+            </ButtonApp>
+          </a>
           <div ref={mobileMenuRef}>
             <HamburgerMenu
               navItems={navItems}
