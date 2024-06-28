@@ -76,36 +76,46 @@ export default function Hero() {
         />
       </div>
       <div className={`${styles.buttonContainer} flex flex-row`}>
-        <Button className={`${styles.button} ${styles.buttonShadow}`}>
-          <div className="flex ml-[32px]">
-            <img src="/telegram-icon.svg" width="32px" className="mr-2" />
-            Telegram
-          </div>
-        </Button>
-        <Button className={`${styles.button} ${styles.buttonShadow}`}>
-          <div className="flex ml-[42px]">
-            <img src="/x-icon.svg" width="32px" className="mr-2" />
-            Twitter
-          </div>
-        </Button>
-        <Button className={`${styles.button} ${styles.buttonShadow}`}>
-          <div className="flex ml-[60px]">
-            <img src="/pinksale-icon.svg" width="32px" className="mr-2" />
-            Buy
-          </div>
-        </Button>
-        <Button className={`${styles.button} ${styles.buttonShadow}`}>
-          <div className="flex ml-[44px]">
-            <img src="/cfgninja-icon.png" width="32px" className="mr-2" />
-            Audit
-          </div>
-        </Button>
-        <Button className={`${styles.button} ${styles.buttonShadow}`}>
-          <div className="flex ml-[22px]">
-            <img src="/pdf-icon.svg" width="32px" className="mr-1" />
-            Whitepaper
-          </div>
-        </Button>
+        <a href="https://t.me/moonmouseannounce" target="_blank">
+          <Button className={`${styles.button} ${styles.buttonShadow}`}>
+            <div className="flex ml-[32px]">
+              <img src="/telegram-icon.svg" width="32px" className="mr-2" />
+              Telegram
+            </div>
+          </Button>
+        </a>
+        <a href="https://x.com/moonmouse24" target="_blank">
+          <Button className={`${styles.button} ${styles.buttonShadow}`}>
+            <div className="flex ml-[42px]">
+              <img src="/x-icon.svg" width="32px" className="mr-2" />
+              Twitter
+            </div>
+          </Button>
+        </a>
+        <a href="" target="_blank">
+          <Button className={`${styles.button} ${styles.buttonShadow}`}>
+            <div className="flex ml-[60px]">
+              <img src="/pinksale-icon.svg" width="32px" className="mr-2" />
+              Buy
+            </div>
+          </Button>
+        </a>
+        <a href="" target="_blank">
+          <Button className={`${styles.button} ${styles.buttonShadow}`}>
+            <div className="flex ml-[44px]">
+              <img src="/cfgninja-icon.png" width="32px" className="mr-2" />
+              Audit
+            </div>
+          </Button>
+        </a>
+        <a href="https://docs.moonmouse.io/" target="_blank">
+          <Button className={`${styles.button} ${styles.buttonShadow}`}>
+            <div className="flex ml-[22px]">
+              <img src="/pdf-icon.svg" width="32px" className="mr-1" />
+              Whitepaper
+            </div>
+          </Button>
+        </a>
       </div>
     </div>
   );
