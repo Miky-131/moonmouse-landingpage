@@ -24,13 +24,13 @@ export default function Hero() {
             <Countdown />
             <a
               target="_blank"
-              href="https://www.pinksale.finance/"
+              href="https://www.pinksale.finance/solana/launchpad/jJnqZfEhfQc8HabiMafDgMv2XkuXSrywDYkfgPYQasd"
               className=""
             ></a>
             <div className="flex flex-row items-center gap-3 pb-4">
               <div className="flex flex-col items-center gap-3">
                 <Button className="from-primaryLight to-primaryLight w-36 text-xl">
-                  <Link href="https://www.pinksale.finance/" target="_blank">
+                  <Link href="https://www.pinksale.finance/solana/launchpad/jJnqZfEhfQc8HabiMafDgMv2XkuXSrywDYkfgPYQasd" target="_blank">
                     <div className="flex ml-[48px]">
                       <img
                         src="/pinksale-icon.svg"
@@ -76,7 +76,7 @@ export default function Hero() {
         />
       </div>
       <div className={`${styles.buttonContainer} flex flex-row`}>
-        <a href="https://t.me/moonmouseannounce" target="_blank">
+        <a href="https://t.me/moonmousecoin" target="_blank">
           <Button className={`${styles.button} ${styles.buttonShadow}`}>
             <div className="flex ml-[32px]">
               <img src="/telegram-icon.svg" width="32px" className="mr-2" />
@@ -92,7 +92,7 @@ export default function Hero() {
             </div>
           </Button>
         </a>
-        <a href="" target="_blank">
+        <a href="https://www.pinksale.finance/solana/launchpad/jJnqZfEhfQc8HabiMafDgMv2XkuXSrywDYkfgPYQasd" target="_blank">
           <Button className={`${styles.button} ${styles.buttonShadow}`}>
             <div className="flex ml-[60px]">
               <img src="/pinksale-icon.svg" width="32px" className="mr-2" />
@@ -100,7 +100,7 @@ export default function Hero() {
             </div>
           </Button>
         </a>
-        <a href="" target="_blank">
+        <a href="https://coinsult.net/projects/moonmouse" target="_blank">
           <Button className={`${styles.button} ${styles.buttonShadow}`}>
             <div className="flex ml-[44px]">
               <img src="/cfgninja-icon.png" width="32px" className="mr-2" />

@@ -12,7 +12,7 @@ function Countdown() {
 
   const calculateTimeLeft = () => {
     const utcNow = Date.now();
-    const futureDate = new Date('2024-06-31T14:00:00Z');
+    const futureDate = new Date('2024-07-23T14:00:00Z');
     const difference = utcNow - futureDate.getTime();
 
     var days = 0;

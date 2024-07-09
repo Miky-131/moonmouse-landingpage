@@ -7,13 +7,28 @@ import Tokenomics from "./Tokenomics";
 import Roadmap from "./Roadmap";
 import Partnerships from "./Partnerships";
 import Footer from "../components/Footer";
+import LoadingAnimation from "../components/LoadingAnimation";
 
 export default function Home() {
   const [isSafari, setIsSafari] = useState(false);
+  const [isPageLoaded, setIsPageLoaded] = useState(false);
 
   useEffect(() => {
     const isSafariBrowser = navigator.vendor?.indexOf("Apple") > -1;
     setIsSafari(isSafariBrowser);
+  }, []);
+
+  useEffect(() => {
+    const handleLoad = () => {
+      setIsPageLoaded(true);
+    };
+
+    if (document.readyState === "complete") {
+      handleLoad();
+    } else {
+      window.addEventListener("load", handleLoad);
+      return () => window.removeEventListener("load", handleLoad);
+    }
   }, []);
 
   return (
@@ -42,7 +57,7 @@ export default function Home() {
         <style jsx global>
           {`
             body {
-              background-image: url("/background4.png");
+              background-image: url("/background4.jpg");
               background-size: cover;
               background-repeat: no-repeat;
               background-attachment: fixed;
@@ -55,6 +70,7 @@ export default function Home() {
         className="flex min-h-screen flex-col items-center justify-between pt-24 overflow-hidden"
         id="home"
       >
+        {!isPageLoaded && <LoadingAnimation />}
         <Hero />
         <Tokenomics />
         <Roadmap />

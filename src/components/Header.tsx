@@ -137,7 +137,7 @@ export default function Header() {
           >
             PARTNERSHIPS
           </a>
-          <a href="https://app.moonmouse.io/staking/">
+          <a href="https://app.moonmouse.io">
             <ButtonApp className={`${styles.buttonApp} ${styles.buttonShadow}`}>
               LAUNCH APP
             </ButtonApp>
