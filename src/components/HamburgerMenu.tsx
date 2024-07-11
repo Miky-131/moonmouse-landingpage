@@ -2,7 +2,7 @@ import { useState } from "react";
 import "../app/HamburgerMenu.css";
 
 interface HamburgerMenuProps {
-  navItems: Array<{ href: string; title: string }>;
+  navItems: Array<{ href: string; title: string; isExternal: boolean }>;
   isOpen: boolean;
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
@@ -13,9 +13,9 @@ export const HamburgerMenu = ({
   setIsOpen,
 }: HamburgerMenuProps) => {
   const HamburgerIcon = () => (
-    <div className="p-1/2">
+    <div className="p-1/2 ml-2">
       <svg
-        className="w-12 h-12 text-white"
+        className="w-11 h-11 text-white"
         fill="none"
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -38,9 +38,13 @@ export const HamburgerMenu = ({
     }
   };
 
-  const handleNavItemClick = (selector: string) => {
-    smoothScrollToElement(selector);
-    setIsOpen(false);
+  const handleNavItemClick = (selector: string, isExternal: boolean) => {
+    if (isExternal) {
+      window.open(selector, "_blank");
+    } else {
+      smoothScrollToElement(selector);
+      setIsOpen(false);
+    }
   };
 
   return (
@@ -55,7 +59,7 @@ export const HamburgerMenu = ({
       {/* Mobile nav menu */}
       <nav className={`mobile-menu ${isOpen ? "open" : ""}`}>
         <ul>
-          {navItems.map(({ href, title }, index) => (
+          {navItems.map(({ href, title, isExternal }, index) => (
             <li key={index}>
               <a
                 key={index}
@@ -63,7 +67,7 @@ export const HamburgerMenu = ({
                 className="mobile-menu-item"
                 onClick={(e) => {
                   e.preventDefault();
-                  handleNavItemClick(href);
+                  handleNavItemClick(href, isExternal);
                 }}
               >
                 {title}

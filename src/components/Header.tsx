@@ -29,18 +29,27 @@ export default function Header() {
     {
       href: "#home",
       title: "HOME",
+      isExternal: false,
     },
     {
       href: "#tokenomics",
       title: "TOKENOMICS",
+      isExternal: false,
     },
     {
       href: "#roadmap",
       title: "ROADMAP",
+      isExternal: false,
     },
     {
       href: "#partnerships",
       title: "PARTNERSHIPS",
+      isExternal: false,
+    },
+    {
+      href: "https://github.com/solidproof/projects/blob/main/2024/MoonMouse",
+      title: "KYC",
+      isExternal: true,
     },
   ];
 
@@ -137,7 +146,14 @@ export default function Header() {
           >
             PARTNERSHIPS
           </a>
-          <a href="https://app.moonmouse.io">
+          <a
+            href="https://github.com/solidproof/projects/blob/main/2024/MoonMouse"
+            className="hover:underline hover:underline-offset-4 transition-all duration-150 hidden lg:block mt-2"
+            target="_blank"
+          >
+            KYC
+          </a>
+          <a href="https://app.moonmouse.io/staking/">
             <ButtonApp className={`${styles.buttonApp} ${styles.buttonShadow}`}>
               LAUNCH APP
             </ButtonApp>

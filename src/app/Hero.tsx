@@ -30,7 +30,10 @@ export default function Hero() {
             <div className="flex flex-row items-center gap-3 pb-4">
               <div className="flex flex-col items-center gap-3">
                 <Button className="from-primaryLight to-primaryLight w-36 text-xl">
-                  <Link href="https://www.pinksale.finance/solana/launchpad/jJnqZfEhfQc8HabiMafDgMv2XkuXSrywDYkfgPYQasd" target="_blank">
+                  <Link
+                    href="https://www.pinksale.finance/solana/launchpad/jJnqZfEhfQc8HabiMafDgMv2XkuXSrywDYkfgPYQasd"
+                    target="_blank"
+                  >
                     <div className="flex ml-[48px]">
                       <img
                         src="/pinksale-icon.svg"
@@ -92,7 +95,10 @@ export default function Hero() {
             </div>
           </Button>
         </a>
-        <a href="https://www.pinksale.finance/solana/launchpad/jJnqZfEhfQc8HabiMafDgMv2XkuXSrywDYkfgPYQasd" target="_blank">
+        <a
+          href="https://www.pinksale.finance/solana/launchpad/jJnqZfEhfQc8HabiMafDgMv2XkuXSrywDYkfgPYQasd"
+          target="_blank"
+        >
           <Button className={`${styles.button} ${styles.buttonShadow}`}>
             <div className="flex ml-[60px]">
               <img src="/pinksale-icon.svg" width="32px" className="mr-2" />
@@ -117,6 +123,19 @@ export default function Hero() {
           </Button>
         </a>
       </div>
+      <a
+        href="https://github.com/solidproof/projects/blob/main/2024/MoonMouse/KYC_Certificate_MoonMouse.png"
+        target="_blank"
+        className="mt-10 mb-6 image-glow-purple"
+      >
+        <div className="flex flex-col">
+          <img
+            src="/SolidProof_Certificate.jpg"
+            width="320px"
+            className="rounded-md"
+          />
+        </div>
+      </a>
     </div>
   );
 }
