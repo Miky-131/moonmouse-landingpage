@@ -163,3 +163,69 @@ h1 {
   text-align: center;
   margin-bottom: 12px;
 }
+
+.partners-scroll-container {
+  width: 100%;
+  overflow: hidden;
+  height: 90px;
+  display: flex;
+  flex-wrap: nowrap;
+  touch-action: none;
+  user-select: none;
+  pointer-events: none;
+}
+
+.partners-scroll-container .badges:hover {
+  animation-play-state: paused;
+  transition: 0.5s ease-in-out;
+}
+
+.partners-scroll-container .badges {
+  animation: badges-scroll-animation 30s linear infinite;
+  flex: 0 0 auto;
+  white-space: nowrap;
+  animation-play-state: running;
+  transition: 0.5s ease-in-out;
+}
+
+@keyframes badges-scroll-animation {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-25%));
+  }
+}
+
+.badge {
+  display: flex;
+  flex-direction: column;
+  padding-right: 32px;
+}
+
+.badge-image {
+  object-fit: contain;
+  touch-action: none;
+  user-select: none;
+  height: 80px;
+
+  @media (max-width: 768px) {
+    height: 50px;
+  }
+}
+
+.btn-simple {
+  color: #fff;
+  transition: 0.2s ease-in-out;
+  touch-action: none;
+  user-select: none;
+  pointer-events: none;
+  cursor: pointer;
+}
+
+.btn-simple:hover {
+  color: #fff;
+  filter: drop-shadow(0px 0px 6px rgba(255, 127, 255, 1));
+  transition: 0.2s ease-in-out;
+}
