@@ -87,7 +87,7 @@ export default function Hero() {
             </div>
           </Button>
         </a>
-        <a href="https://x.com/moonmouse24" target="_blank">
+        <a href="https://x.com/Moonmouse20" target="_blank">
           <Button className={`${styles.button} ${styles.buttonShadow}`}>
             <div className="flex ml-[42px]">
               <img src="/x-icon.svg" width="32px" className="mr-2" />
