@@ -117,12 +117,12 @@ const partnersData: Partner[] = [
   {
     src: "/partner-pinksale.png",
     alt: "PinkSale",
-    href: "https://www.pinksale.finance",
+    href: "https://www.pinksale.finance/solana/launchpad/jJnqZfEhfQc8HabiMafDgMv2XkuXSrywDYkfgPYQasd",
   },
   {
     src: "/partner-dexview.png",
     alt: "DEXView",
-    href: "https://www.dexview.com/",
+    href: "https://www.dexview.com/solana/MMm5bNGg5PynP1pp2KMxLCT5UdB7cjQvwUx9yz6AnHU",
   },
   {
     src: "/partner-3.png",
